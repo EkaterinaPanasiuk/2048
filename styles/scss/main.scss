@@ -1,0 +1,200 @@
+@import "./vars.scss";
+.main {
+  width: 100%;
+  height: 100%;
+  @include disp-flex-r-cen-cen;
+}
+.game-container {
+  display: grid;
+  width: fit-content;
+  border: 1px solid red;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  padding: 0.5rem;
+  border: 3px solid $color-shadow;
+  border-radius: 10px;
+  box-shadow: 0 0 10px $color-shadow;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 2rem auto;
+  overflow: hidden;
+  background-image: url("../../accets/bg.png");
+}
+.day-container {
+  border: 3px solid $color-bg-superlight !important;
+  box-shadow: 0 0 10px $color-bg-superlight !important;
+}
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes hiden {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.box {
+  @include disp-flex-r-cen-cen;
+  border: 1px solid $color-bg-light;
+  margin: 3px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-radius: 12px;
+  color: $color-bg;
+  // transition: all 0.3s;
+  //animation: visible 0.5s ease-in;
+}
+.box-2 {
+  color: $color-2;
+  text-shadow: 0 0 10px $color-2, 0 0 20px $color-2, 0 0 30px $color-2,
+    0 0 40px $color-2;
+  border: 3px solid $color-2;
+  box-shadow: 0 0 4px $color-2;
+}
+.box-4 {
+  color: $color-4;
+  border: 3px solid $color-4;
+  box-shadow: 0 0 4px $color-4;
+
+  text-shadow: 0 0 10px $color-4, 0 0 20px $color-4, 0 0 30px $color-4,
+    0 0 40px $color-4;
+}
+.box-8 {
+  color: $color-8;
+  border: 3px solid $color-8;
+  box-shadow: 0 0 4px $color-8;
+
+  text-shadow: 0 0 10px $color-8, 0 0 20px $color-8, 0 0 30px $color-8,
+    0 0 40px $color-8;
+}
+.box-16 {
+  color: $color-16;
+  border: 3px solid $color-16;
+  box-shadow: 0 0 4px $color-16;
+
+  text-shadow: 0 0 10px $color-16, 0 0 20px $color-16, 0 0 30px $color-16,
+    0 0 40px $color-16;
+}
+.box-32 {
+  color: $color-32;
+  border: 3px solid $color-32;
+  box-shadow: 0 0 4px $color-32;
+  text-shadow: 0 0 10px $color-32, 0 0 20px $color-32, 0 0 30px $color-32,
+    0 0 40px $color-32;
+}
+.box-64 {
+  color: $color-64;
+  border: 3px solid $color-64;
+  box-shadow: 0 0 4px $color-64;
+  text-shadow: 0 0 10px $color-64, 0 0 20px $color-64, 0 0 30px $color-64,
+    0 0 40px $color-64;
+}
+.box-128 {
+  color: $color-128;
+  border: 3px solid $color-128;
+  box-shadow: 0 0 4px $color-128;
+  text-shadow: 0 0 10px $color-128, 0 0 20px $color-128, 0 0 30px $color-128,
+    0 0 40px $color-128;
+}
+.box-256 {
+  color: $color-256;
+  border: 3px solid $color-256;
+  box-shadow: 0 0 4px $color-256;
+  text-shadow: 0 0 10px $color-256, 0 0 20px $color-256, 0 0 30px $color-256,
+    0 0 40px $color-256;
+}
+.box-512 {
+  color: $color-512;
+  border: 3px solid $color-512;
+  box-shadow: 0 0 4px $color-512;
+  text-shadow: 0 0 10px $color-512, 0 0 20px $color-512, 0 0 30px $color-512,
+    0 0 40px $color-512;
+}
+.box-1024 {
+  color: $color-1024;
+  border: 3px solid $color-1024;
+  box-shadow: 0 0 4px $color-1024;
+  text-shadow: 0 0 10px $color-1024, 0 0 20px $color-1024, 0 0 30px $color-1024,
+    0 0 40px $color-1024;
+}
+.box-2048 {
+  color: $color-2048;
+  border: 3px solid $color-2048;
+  box-shadow: 0 0 4px $color-2048;
+  text-shadow: 0 0 10px $color-2048, 0 0 20px $color-2048, 0 0 30px $color-2048,
+    0 0 40px $color-2048;
+}
+@keyframes left {
+  from {
+    opacity: 80%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.bg {
+  background-color: $color-bg;
+  /* transform: translateZ(+10);
+  overflow: hidden; */
+}
+.left {
+  position: relative;
+  z-index: -10;
+  transition: 500ms ease-in-out;
+  transition-property: transform;
+  transform: translateX(-100px);
+  transform: matrix();
+  animation: left 0.5s ease-in;
+}
+.up {
+  position: relative;
+  z-index: -10;
+  transition: 500ms ease-in-out;
+  transition-property: transform;
+  transform: translateY(-100px);
+  animation: left 0.3s ease-in;
+}
+.right {
+  position: relative;
+  z-index: -10;
+  transition: 500ms ease-in-out;
+  transition-property: transform;
+  transform: translateX(100px);
+  animation: left 0.5s ease-in;
+}
+.down {
+  position: relative;
+  z-index: -10;
+  transition: 500ms ease-in-out;
+  transition-property: transform;
+  transform: translateY(100px);
+  animation: left 0.3s ease-in;
+}
+.botom-down {
+  border-bottom: 3px solid $color-bg;
+}
+.botom-left {
+  border-left: 3px solid $color-bg;
+}
+.botom-right {
+  border-right: 3px solid $color-bg;
+}
+.botom-top {
+  border-top: 3px solid $color-bg;
+}
+.day {
+  background-color: white;
+}
+.box-0 {
+  color: $color-bg;
+}
+.day {
+  color: white !important;
+}

@@ -1,0 +1,53 @@
+/* $color-bg: #fff;
+$color-1: #f3ed31d0;
+$color-2: #fffd40;
+$color-4: #3aa6d0;
+$color-8: #ffa340;
+$color-16: #9a3fd5;
+$color-32: #c4f83e;
+$color-64: #e138aa;
+$color-128: #94c9da;
+$color-256: #ff8900;
+$color-512: #07577f;
+$color-1024: #aef100;
+$color-2048: #c30083; */
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+  background-color: #c30083; }
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+  row-gap: 0.5rem;
+  column-gap: 2rem; }
+
+.footer-link {
+  display: block;
+  text-align: center;
+  max-width: 300px;
+  font-size: 1.5rem;
+  color: #181812;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+  text-decoration: none; }
+  .footer-link:hover {
+    color: #2435d0;
+    text-shadow: 0 0 5px #ffffff; }
+  .footer-link:active {
+    color: #c30083;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #047bd0, 0 0 30px #047bd0, 0 0 40px #ffffff; }
+
+.footer-logo {
+  width: 6.5rem;
+  height: 2rem; }
+
+/*# sourceMappingURL=footer.css.map */

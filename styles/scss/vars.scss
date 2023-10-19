@@ -1,0 +1,75 @@
+$color-bg: #181812;
+$color-bg-light: #343434;
+$color-bg-superlight: #8a8a8a;
+
+$color-1: #c30083;
+
+$color-2: #36da82;
+$color-4: #2de6e9;
+$color-8: #2435d0;
+$color-16: #ffd200;
+$color-32: #c4f83e;
+$color-64: #ff43c0;
+$color-128: #047bd0;
+$color-256: #fe3f44;
+$color-512: #ff9500;
+$color-1024: #ff3900;
+$color-2048: #c30083;
+$color-shadow: #ffffff;
+
+/* $color-bg: #fff;
+$color-1: #f3ed31d0;
+$color-2: #fffd40;
+$color-4: #3aa6d0;
+$color-8: #ffa340;
+$color-16: #9a3fd5;
+$color-32: #c4f83e;
+$color-64: #e138aa;
+$color-128: #94c9da;
+$color-256: #ff8900;
+$color-512: #07577f;
+$color-1024: #aef100;
+$color-2048: #c30083; */
+
+@mixin disp-flex-r-cen-cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin disp-flex-r-around-cen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin disp-flex-r-between-cen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin disp-flex-r-start-cen {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+%btn {
+  font-size: 1.8rem;
+  padding: 0.4em;
+  border-radius: 0.5rem;
+  background-color: $color-shadow;
+  color: $color-bg;
+  font-weight: 600;
+  text-shadow: 0 0 12px $color-2048;
+  box-shadow: 0 0 10px $color-2048;
+  border: 3px solid $color-2048;
+
+  &:hover {
+    box-shadow: 0 0 10px $color-4;
+    text-shadow: 0 0 12px $color-4, 0 0 20px $color-4;
+    border: 3px solid $color-4;
+  }
+  &:active {
+    box-shadow: 0 0 10px $color-32;
+    text-shadow: 0 0 12px $color-32, 0 0 20px $color-32;
+    border: 3px solid $color-32;
+  }
+}

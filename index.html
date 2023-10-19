@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>2048</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <header class="header">
+        <h1 class="header-info" id="header-score"></h1>
+        <h2 class="header-info" id="header-moves"></h2>
+        <h2 class="header-info" id="header-time"></h2>
+        <audio src="./accets/blob.mp3" id="audio"></audio>
+        <div class="header-line">
+          <button class="btn" id="open-recordlist-btn">Records List</button>
+          <button class="btn" id="try-again">Try again</button>
+          <button class="btn" id="change-theme">Day</button>
+          <button class="btn" id="mute">Mute</button>
+        </div>
+      </header>
+      <main class="main">
+        <div class="game-container" id="game-container"></div>
+      </main>
+      <div class="modal-wrapper" id="user-list-modal-wrapper">
+        <div class="modal">
+          <button class="modal-close" id="modal-close-userlist-btn">
+            &#10006;
+          </button>
+          <div class="list-title-row">
+            <h2 class="list-title">Name</h2>
+            <h2 class="list-title">Time</h2>
+            <h2 class="list-title">Moves</h2>
+          </div>
+          <ol id="user-list" class="user-list" start="1"></ol>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-container">
+          <a class="footer-link" href="https://github.com/EkaterinaPanasiuk/"
+            >EkaterinaPanasiuk-GitHub</a
+          >
+          <span class="footer-link">2023</span>
+          <img
+            src="https://rs.school/images/rs_school_js.svg"
+            alt="RS-School-logo"
+            class="footer-logo"
+          />
+          <a class="footer-link" href="https://rs.school/js-stage0/"
+            >Подготовительный курс «JavaScript/Front-end. Stage 0»</a
+          >
+        </div>
+      </footer>
+      <div class="modal-wrapper" id="lose-modal-wrapper">
+        <div class="modal lose-modal" id="lose-modal">
+          <button class="modal-close" id="modal-close-lose-btn">
+            &#10006;
+          </button>
+          <h1 class="modal-title">Your lose</h1>
+          <h2 class="modal-subtitle" id="lose-score"></h2>
+          <h2 class="modal-subtitle" id="lose-time"></h2>
+          <h2 class="modal-subtitle" id="lose-moves"></h2>
+        </div>
+      </div>
+      <div class="modal-wrapper" id="win-modal-wrapper">
+        <div class="modal win-modal" id="win-modal">
+          <button class="modal-close" id="modal-close-win-btn">&#10006;</button>
+          <h1 class="modal-title">Your win</h1>
+          <form action="get" class="modal-form">
+            <label for="username" class="modal-subtitle modal-label"
+              >Enter your name:</label
+            >
+            <input type="text" id="username" class="modal-input" />
+          </form>
+          <h2 class="modal-subtitle" id="win-score"></h2>
+          <h2 class="modal-subtitle" id="win-time"></h2>
+          <h2 class="modal-subtitle" id="win-moves"></h2>
+          <button class="save-btn" id="save-user-btn" type="button">
+            Save
+          </button>
+        </div>
+      </div>
+
+      <script src="./scripts/index.js" type="module"></script>
+    </div>
+  </body>
+</html>
